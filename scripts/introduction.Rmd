@@ -1,0 +1,92 @@
+---
+title: "Introduction"
+author: "Mburu"
+date: "5/23/2022"
+output:
+  ioslides_presentation:
+    toc: true
+    toc_depth: 3
+  html_document: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## Introduction  
+
+- The main purpose of this course is to help you become efficient in working in R especially where you have to do a lot of data manipulation
+
+- Also it will help you understands a little bit about computation
+
+- Generally we will be borrowing some ides from computer science/computation 
+
+- *What is computation-  is any type of arithmetic or non-arithmetic calculation that follows a well-defined model (e.g., an algorithm)*
+
+## Too kinds of knowledge
+
+### Declarative
+
+- Declarative knowledge is composed of statements of facts y is the square root of x if Y*y = x. Doesn't tell you how to find the quare root. All get  all participants < 6 months at adm who came for follow up 
+
+----------
+
+### Imperative
+- imperative tells how to accomplish something eg recipe 
+- eg Algorithm- How to perform a computation 
+- Algorithms have instructions and flow of control (copy the handout)
+- Eg in our example read admission data filter kids less than 6 months read follow up data then join the two data sets
+
+
+----------
+
+- As a data manager/data scientist/statistician normally what you do is to turn declarative knowledge to imperative
+- Eg in the example above the PI asks for for participants who are less than 6 months who came for follow up
+
+----------
+
+
+- We will use R to learn about this concepts
+
+## Programming Language
+
+- What defines a programming language
+
+- Syntax Which sequences of characters and symbols constitute well formed string
+- Static semantics Which well formed strings have meaning
+- Semantics what the meaning is
+
+----------
+
+- x = 3+4  syntactically correct
+- x = 3 4  not syntactically correct
+- 3/"abc" syntactically correct static semantics is broken
+- semantics works only when the string is syntactically correct and static semantically correct an assigns meaning
+
+----------
+
+## Common problems with scripts
+
+- We can right script that doesn't do what we want it to do
+
+## Reasons 
+- Crash When you /Throw the red error
+- Never stop infinite loop- When you get into flow of control 
+- Might run to completion but give long answer eg badly designed is.na()(this is the worst one) (Most common)
+
+----------
+
+
+## Why are people using R
+- Fast to learn
+- Free
+- widely used especially life sciences
+- Easier to debug cause it is interpreted language
+
+## Exerices 
+
+
+
+
+
