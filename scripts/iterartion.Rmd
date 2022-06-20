@@ -1,0 +1,131 @@
+---
+title: "Decrementing Functions & Iterartion"
+date: "5/24/2022"
+output:
+  revealjs::revealjs_presentation:
+     theme: sky
+     highlight: pygments
+     transition: convex
+  slidy_presentation: default
+  html_document: default
+  ioslides_presentation: default
+---
+
+
+
+```{r}
+library(tidyverse)
+library(DT)
+```
+
+## Iteration reducing duplication
+
+- Remember our condition 
+
+- For loop
+
+```{r}
+
+for (i in 1:5) {
+  print(i)
+}
+```
+
+-----
+
+
+```{r}
+df <- data.frame(
+  a = rnorm(5),
+  b = rnorm(5),
+  c = rnorm(5),
+  d = rnorm(5)
+)
+datatable(df)
+```
+
+-----
+
+```{r}
+median(df$a)
+#> [1] -0.2457625
+median(df$b)
+#> [1] -0.2873072
+median(df$c)
+#> [1] -0.05669771
+median(df$d)
+#> [1] 0.1442633
+```
+
+-----
+
+```{r}
+output <- vector("double", ncol(df))  # 1. output
+for (i in seq_along(df)) {            # 2. sequence
+  output[[i]] <- median(df[[i]])      # 3. body
+}
+output
+```
+------
+
+
+- Unknown sequence length (While loop)
+Sometimes you don’t even know how long the input sequence should run for. This is common when doing simulations. For example, you might want to loop until you get three heads in a row. You can’t do that sort of iteration with the for loop. Instead, you can use a while loop. A while loop is simpler than for loop because it only has two components, a condition and a body
+
+-----
+
+- mostly used in machine learning
+
+```{r}
+output_while <- vector("double", ncol(df)) 
+i =1
+n_coldf = ncol(df)
+while(i <= n_coldf){
+  
+   output_while[[i]] <- median(df[[i]])
+   i = i+1 # decrementing function ensures that at the end the loop will terminate
+   #print(i)
+ 
+}
+
+output_while
+```
+
+
+### Real life implementation 
+
+- Implementation here in KEMRI by a friend
+
+```{r}
+n = 50
+df <- data.frame(
+  a = rnorm(n),
+  b = rnorm(n),
+  c = rnorm(n),
+  d = rnorm(n)
+)
+
+```
+
+-----
+
+```{r}
+miss_vars_perc <- seq(.5, .8, by = 0.01)
+miss_vars_perc
+miss_vars_perc <- sample(miss_vars_perc, ncol(df))
+miss_vars_perc
+```
+
+----
+
+```{r}
+#output <- vector("double", ncol(df)) 
+n_row  <- nrow(df)
+for (i in seq_along(df)) { 
+  n_rows_i = miss_vars_perc[i] *n_row
+  n_rows_i = round(n_rows_i)
+  number_rows = sample(n_row, n_rows_i)
+  df[[i]][number_rows]=NA
+}
+```
+

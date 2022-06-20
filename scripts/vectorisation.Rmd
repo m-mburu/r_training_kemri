@@ -1,0 +1,183 @@
+---
+title: "Vectorisation and conditional statements"
+date: "5/24/2022"
+output:
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    transition: convex
+  slidy_presentation: default
+  html_document: default
+  beamer_presentation:
+    highlight: pygments
+  ioslides_presentation: default
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(data.table)
+library(DT)
+```
+
+## Introduction
+
+```{r }
+x <- 1:10
+y <- 1:10
+x+y
+```
+
+-----
+
+```{r}
+output_vector <- c()
+for (i in 1:4) {
+  output_vector[i] <- x[i] + y[i]
+}
+output_vector
+```
+
+-----
+
+
+```{r}
+
+```
+
+
+```{r}
+sqrt(x)
+log(x)
+
+```
+
+
+
+-----
+
+```{r}
+x>4
+x[x>4]
+
+```
+
+-----
+
+
+```{r}
+df <- data.frame(x = 1:5, y = 6:10)
+df %>% datatable()
+```
+
+-----
+
+```{r}
+df$x5 <- df$x + 5
+df %>% datatable()
+```
+
+-----
+
+```{r}
+df$ylog <- log(df$x) 
+df %>% datatable()
+```
+
+-----
+
+## Condition Statements
+
+- The case should always evaluate to a binary of one length 
+
+- if(case1) { 
+expression1 
+}else if(case2) {
+expression2 
+}
+more else of
+
+else last.expression
+
+-----
+
+```{r}
+x <- -3
+if (x < 0) {
+  print("x is a negative number")
+}
+```
+
+----
+
+```{r}
+x <- -3
+if (x < 0) {
+  print("x is a negative number")
+}else{
+  print("x is a positive number")
+}
+```
+
+----
+
+
+
+```{r}
+x <- 5
+if (x < 0) {
+  print("x is a negative number")
+}else if(x >= 0 & x <= 5){
+  print("x is between 0 and 5")
+}else{
+  
+  print("x is between 0 and 5")
+}
+```
+
+----
+
+## Vectorised if else
+
+```{r}
+x <- 1:10
+
+ifelse(x > 5, "x greater than 5", "x less than 5")
+
+```
+
+-----
+
+### Some useful functions from tidyverse and data.table(Vectorisation)
+
+- R is vectorised language
+
+```{r}
+ifelse(between(x, 3, 5),
+       "x is between 3 and 5",
+       "x is less than 3 or greater than 5")
+
+```
+
+-----
+
+```{r}
+case_when(x < 3 ~ "X is less than 3",
+          between(x, 3, 5)~ "x is between 3 and 5",
+          x > 5 ~ "x is  greater than 5",
+          TRUE ~ "missing")
+
+```
+-----
+
+
+
+```{r}
+
+fcase(x < 3 , "X is less than 3",
+          between(x, 3, 5), "x is between 3 and 5",
+          x > 5 , "x is  greater than 5",
+          default =   "missing")
