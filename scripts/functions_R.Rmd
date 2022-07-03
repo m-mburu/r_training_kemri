@@ -1,0 +1,69 @@
+---
+title: "Functions in R"
+author: "Mburu"
+date: '2022-07-01'
+output:
+  revealjs::revealjs_presentation:
+     theme: sky
+     highlight: pygments
+     transition: convex
+  slidy_presentation: default
+  html_document: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+
+library(tidyverse)
+library(DT)
+```
+
+
+
+## Functions
+
+- A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing
+
+-----
+
+### Functions Already used
+
+```{r}
+x <- 1:10
+y <- 11:20
+sum(x)
+mean(x)
+cor(x, y)
+```
+
+-----
+
+```{r}
+lm_fit <- lm(Petal.Length ~ Petal.Width, data = iris)
+
+library(broom)
+
+
+```
+
+------
+
+```{r}
+options(digits = 4)
+library(tidyverse)
+tidy(lm_fit) %>% datatable()
+```
+
+----
+
+### When should you write a function?
+You should consider writing a function whenever you’ve copied and pasted a block of code more than twice
+
+```{r}
+
+```
+

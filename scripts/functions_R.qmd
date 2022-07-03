@@ -1,0 +1,231 @@
+---
+title: "Functions in R"
+author: "Mburu"
+date: '2022-07-01'
+format:
+  revealjs:
+     theme: sky
+     highlight: pygments
+     transition: convex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+
+library(tidyverse)
+library(data.table)
+library(DT)
+```
+
+
+
+## Functions
+
+- A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing
+
+-----
+
+### Functions Already used
+
+```{r}
+x <- 1:10
+y <- 11:20
+sum(x)
+mean(x)
+cor(x, y)
+```
+
+-----
+
+```{r}
+lm_fit <- lm(Petal.Length ~ Petal.Width, data = iris)
+
+library(broom)
+
+
+```
+
+------
+
+```{r}
+
+cols <- c( "estimate", "std.error", "statistic", "p.value")
+tidy_lm <- tidy(lm_fit) 
+tidy_lm %>% datatable() %>%
+formatRound(columns = cols,  digits=3)
+```
+
+----
+
+### When should you write a function?
+You should consider writing a function whenever you’ve copied and pasted a block of code more than twice
+
+```{r}
+a <- rnorm(10)
+b <- rnorm(10)
+c <- rnorm(10)
+d <- rnorm(10)
+```
+
+-----
+
+### Without functions 
+- introduce NA's 
+```{r}
+a - min(a)/(max(a) - min(a))
+b - min(b)/(max(b) - min(b))
+c - min(c)/(max(c) - min(c))
+d - min(d)/(max(d) - min(d))
+```
+
+-----
+
+### Function to work on this
+
+- can introduce many features applied to all
+
+```{r}
+zero_one <- function(x, na_rm = T, round_digits = 3){
+  min_x = min(x, na.rm = na_rm)
+  max_x = max(x, na.rm = na_rm)
+  diff_x = max_x - min_x
+  ans = (x - min_x)/diff_x
+  round(ans, digits = round_digits)
+}
+```
+
+-----
+
+### With Functions
+
+```{r}
+zero_one(a)
+zero_one(b)
+zero_one(c)
+zero_one(d)
+```
+
+### Return value
+
+```{r}
+plus_one <- function(x){
+  x = x+1
+}
+plus_one(5)
+```
+
+-----
+
+```{r}
+plus_one_return <- function(x){
+  x = x+1
+  x
+}
+plus_one_return(5)
+```
+
+
+```{r}
+plus_one_return <- function(x){
+  x = x+1
+  return(x)
+}
+plus_one_return(5)
+```
+
+----
+
+### Inputs to functions
+
+- Most functions require some sort of input to determine what to compute.
+The inputs to functions are called arguments. You specify them inside the
+parentheses after the word "function."
+- In the above a, b, c, d are the arguments
+
+### Multiple inputs to functions
+ - If has more than one argument, list them in the function 
+signature, separated by commas.
+
+```{r}
+
+cor(x = iris$Sepal.Length,y= iris$Petal.Length)
+
+```
+
+
+-----
+
+```{r}
+fx <- function(x){
+  x = x+1
+  cat("x = ", x)
+  x
+}
+```
+
+```{r}
+
+```
+
+### Numeric defaults
+- add cutpoint = 6
+
+```{r}
+number_greater <- function(age, cutpoint){
+  age_cut <- age>=cutpoint
+  no_greater <- sum(age_cut)
+  return(no_greater)
+  
+}
+
+age <- rnorm(100, mean = 6, sd = 3)
+# if you dont specify cutpoint it will throw an error
+
+number_greater(age = age, cutpoint = 6)
+```
+
+
+```{r}
+number_greater <- function(age, cutpoint = 6){
+  age_cut <- age>=cutpoint
+  no_greater <- sum(age_cut)
+  return(no_greater)
+  
+}
+
+number_greater(age = age)
+number_greater(age = age, cutpoint = 7)
+```
+
+-----
+
+```{r}
+
+x = 3
+z = fx(x)
+cat('z =', z)
+cat('x =', x)
+
+```
+
+-----
+
+
+### Functions inputs & outputs various R functions
+
+### Assignments
+
+#### produce a vector of numbers 1 upto 20
+- produce a vector of numbers 1 upto 20
+- write a function to test if a number is even
+- subset all even numbers
+
+#### Fit a univariate linear model from iris data set
+
+```{r}
+
+```
+
