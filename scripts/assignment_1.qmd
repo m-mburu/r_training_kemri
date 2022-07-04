@@ -1,0 +1,125 @@
+---
+title: "Assignment 1 R Training"
+format: 
+  pdf:
+    documentclass: report
+editor: visual
+---
+
+1.  produce a vector of numbers 1 upto 20
+
+    -   write a function to test if a number is even
+
+    -   subset all even numbers
+
+    -   subset all odd numbers
+
+```{=html}
+<!-- -->
+```
+2.  Fit a univariate linear model from iris data set using Petal.Length as Y and Sepal.Width as X
+
+    -   Access the model output using str
+
+    ```{=html}
+    <!-- -->
+    ```
+    -   get fitted values from resulting object
+
+    ```{=html}
+    <!-- -->
+    ```
+    -   get residuals from the resulting lm object
+
+    -   plot a histogram from resulting
+
+3.  See haemoglobin values below
+
+    -   haemoglobin \<- c(9, "8.9", 9.4, 12.6, 12.6, 12.8, 14, 13.9, 14.4, 13.6,
+
+    7.7, 7.7, 7.8, 11.5, 11.7, NA, 10.5, 10.5, 10.4, NA,
+
+    12.5, 11.8, 10.4, 10.1, NA, NA, 10.8, 10.8, 10.7,
+
+    10.8, 10.2, 11.6, 11.6, 8.7, 8.7, NA, NA, 12.1,
+
+    11.8, 10.1, "10.1", 9.7, "10.6", 10.9, 8.4, 8.4,
+
+    9.2, 9.5, "9.4")
+
+    -   Write a function that standardizes them using the formula below haemoglobin_adj = haemoglobin - 0.8
+
+    -   find mean, median of haemoglobin_adj & haemoglobin
+
+4.  See vector below
+
+    -   sex_num \<- c(2, 2, 1, 1, 2, 1, 2, 1, 1,
+        1, 2, 2, 1, 1, 2, 1, 1, 2, 2, 2)
+
+    -   Convert this to a factor given 1=Male and 2 = Female
+
+    -   Find the proportions of Females
+
+5.  See the dates vectors below and convert them to date format
+
+    dob \<\_ c("Jan/23/21", "Apr/23/21", "Apr/22/21", "Feb/04/21", "Apr/13/21",
+
+    "Feb/05/21", "Feb/23/21", "Jan/20/21", "Mar/01/21", "Feb/01/21")
+
+    adm_date \<- c("16/11/2021", "30/10/2021", "23/10/2021", "20/10/2021", "08/12/2021", "02/01/2022", "21/10/2021", "13/12/2021", "03/12/2021", "27/11/2021")
+
+    -   dob = date of birth and adm_date = enrollment date. Calculate enrollment age in months
+
+    -   Find mean, median
+
+6.  Get the iris data set in R using the this function data("iris") and then use head(iris) to view the first five rows. Without using tidyverse or data.table compute the following
+
+    -   Subset the first 5 rows with all columns
+
+    -   Subset row number 10 to row number 20 with all columns
+
+    -   Select the first two columns
+
+    -    Select Sepal.Length & Species columns
+
+    -   Subset where Petal.Length is greater than 4
+
+    -   Subset where Petal.Length is greater than 4 and Species is versicolor
+
+    -   Subset where Petal.Length is greater than 4 or Species is versicolor
+
+7.  See the list below
+
+    l2 \<- list(country = c("Uganda", "Bangladesh", "Malawi"),
+    collaborators = c("Chris", "Sayeem", "Chikondi"),
+    sites = c("Kampala", "Dhaka", "Blantrye"))
+
+    -   Convert this to a data frame
+
+    -   Find the mean of the following vectors vec \<- c(1:10, NA)
+
+8.  See the vector below
+
+    vec8 \<- c(10.6, 22.3, 5.4, 12.6, 7.6, 13.2, 2.8, 15.9, 9.2, 15.7, 7,
+
+    9.1, 9.2, 8, 12.2, 2.6, 12.3, 11.9, 5.6, 11)
+
+    -   produce another vector which has two values based on the condition that values of vec10 are less or equal to 10 or greater or equal 10. The values should be "\<=10", "\>10"
+
+    -   Produce another vector based on these conditions values less than 5 as "\<5" values between 5 and 10 as "5-10" and values \> 10 as "10"
+
+9.  Using vec8 above
+
+    -   Add 0.01 to each element using for loop
+
+    -   Add 0.01 to each element using while loop
+
+    -   Add 0.01 to each element using vectorization R method
+
+    -   Add 0.01 to each element less than 10 and 0.1 to each element greater or equal to 10 using for loop
+
+    -   Add 0.01 to each element less than 10 and 0.1 to each element greater or equal to 10 using R way, vectorization
+
+10. 
+
+    -   

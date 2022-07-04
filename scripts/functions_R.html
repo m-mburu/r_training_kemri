@@ -442,8 +442,8 @@
 <span id="cb8-4"><a href="#cb8-4"></a><span class="fu">formatRound</span>(<span class="at">columns =</span> cols,  <span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="htmlwidget-e9636cd4cfccb408b2c6" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e9636cd4cfccb408b2c6">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["(Intercept)","Petal.Width"],[1.08355803285051,2.22994049512186],[0.0729669626988389,0.0513962314651413],[14.849981317199,43.3872373820692],[4.04331774337186e-31,4.6750039073275e-86]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
+<div id="htmlwidget-15703f48706a80a9e35c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-15703f48706a80a9e35c">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["(Intercept)","Petal.Width"],[1.08355803285051,2.22994049512186],[0.0729669626988389,0.0513962314651413],[14.849981317199,43.3872373820692],[4.04331774337186e-31,4.6750039073275e-86]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 3, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -467,23 +467,23 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>a <span class="sc">-</span> <span class="fu">min</span>(a)<span class="sc">/</span>(<span class="fu">max</span>(a) <span class="sc">-</span> <span class="fu">min</span>(a))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -1.1356102  2.5021751 -0.4363895  1.8607754  0.5760274  1.0821744
- [7]  1.1924802 -0.5513957 -0.4419005  1.8288760</code></pre>
+<pre><code> [1]  0.8842349  0.9653677  1.1719777  1.6766890 -1.2571324  0.4182508
+ [7]  1.6993076  0.5701533  0.3765448 -0.2841232</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>b <span class="sc">-</span> <span class="fu">min</span>(b)<span class="sc">/</span>(<span class="fu">max</span>(b) <span class="sc">-</span> <span class="fu">min</span>(b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] -0.17218367 -0.93127423  1.69523958 -0.04382001  1.06055976  1.12771503
- [7]  1.62304523 -1.35498813  0.68414442  1.13436769</code></pre>
+<pre><code> [1] -1.40436699  0.33960362  1.06604320  0.15733201 -0.00374581 -0.15101179
+ [7]  2.21147664 -1.41396630 -0.81344112  1.19070742</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>c <span class="sc">-</span> <span class="fu">min</span>(c)<span class="sc">/</span>(<span class="fu">max</span>(c) <span class="sc">-</span> <span class="fu">min</span>(c))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.55016976 -0.19566321  1.30476892  0.04675261  1.19203761 -0.51811058
- [7]  0.55765793  1.70565428 -0.51940012  0.44950227</code></pre>
+<pre><code> [1] -0.34999514  2.44989456 -1.31700373  0.61731915 -0.08865715  1.25369310
+ [7]  2.17102034  0.65011423  2.27897936  0.37330514</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>d <span class="sc">-</span> <span class="fu">min</span>(d)<span class="sc">/</span>(<span class="fu">max</span>(d) <span class="sc">-</span> <span class="fu">min</span>(d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1.6286198 -1.2068449  1.8570407  1.9120098  2.4542458  0.2670521
- [7]  1.5497938 -0.3255083  1.8820341  0.2202182</code></pre>
+<pre><code> [1]  1.1143625  1.2971499  1.4084769 -0.3663143  1.2777849  0.8102107
+ [7] -0.3730654 -0.4123212  0.8318329  0.1602269</code></pre>
 </div>
 </div>
 </section>
@@ -509,19 +509,19 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">zero_one</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.000 1.000 0.192 0.824 0.471 0.610 0.640 0.161 0.191 0.815</code></pre>
+<pre><code> [1] 0.724 0.752 0.822 0.992 0.000 0.567 1.000 0.618 0.553 0.329</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">zero_one</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.388 0.139 1.000 0.430 0.792 0.814 0.976 0.000 0.669 0.816</code></pre>
+<pre><code> [1] 0.003 0.484 0.684 0.433 0.389 0.348 1.000 0.000 0.166 0.718</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">zero_one</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.481 0.145 0.820 0.254 0.769 0.001 0.484 1.000 0.000 0.435</code></pre>
+<pre><code> [1] 0.257 1.000 0.000 0.514 0.326 0.682 0.926 0.522 0.955 0.449</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">zero_one</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.774 0.000 0.837 0.852 1.000 0.403 0.753 0.241 0.844 0.390</code></pre>
+<pre><code> [1] 0.838 0.939 1.000 0.025 0.928 0.671 0.022 0.000 0.683 0.314</code></pre>
 </div>
 </div>
 <h3 id="return-value">Return value</h3>
@@ -602,7 +602,7 @@
 <span id="cb35-10"><a href="#cb35-10"></a></span>
 <span id="cb35-11"><a href="#cb35-11"></a><span class="fu">number_greater</span>(<span class="at">age =</span> age, <span class="at">cutpoint =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 46</code></pre>
+<pre><code>[1] 52</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -615,11 +615,11 @@
 <span id="cb37-7"><a href="#cb37-7"></a></span>
 <span id="cb37-8"><a href="#cb37-8"></a><span class="fu">number_greater</span>(<span class="at">age =</span> age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 46</code></pre>
+<pre><code>[1] 52</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">number_greater</span>(<span class="at">age =</span> age, <span class="at">cutpoint =</span> <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 34</code></pre>
+<pre><code>[1] 39</code></pre>
 </div>
 </div>
 </section>
@@ -650,8 +650,21 @@
 <li>produce a vector of numbers 1 upto 20</li>
 <li>write a function to test if a number is even</li>
 <li>subset all even numbers</li>
+<li>subset all odd numbers</li>
 </ul>
 <h4 id="fit-a-univariate-linear-model-from-iris-data-set">Fit a univariate linear model from iris data set</h4>
+<ul>
+<li>get fitted values from resulting object</li>
+<li>get residuals from the resulting lm object</li>
+<li>plot a histogram from resulting</li>
+</ul>
+<h3 id="see-haemoglobin-values-below-from-a-site">See haemoglobin values below from a site</h3>
+<ul>
+<li><p>haemoglobin &lt;- c(9, “8.9”, 9.4, 12.6, 12.6, 12.8, 14, 13.9, 14.4, 13.6, 7.7, 7.7, 7.8, 11.5, 11.7, NA, 10.5, 10.5, 10.4, NA, 12.5, 11.8, 10.4, 10.1, NA, NA, 10.8, 10.8, 10.7, 10.8, 10.2, 11.6, 11.6, 8.7, 8.7, NA, NA, 12.1, 11.8, 10.1, “10.1”, 9.7, “10.6”, 10.9, 8.4, 8.4, 9.2, 9.5, “9.4”)</p></li>
+<li><p>Write a function that standardizes them using the formula below</p></li>
+<li><p>haemoglobin_adj = haemoglobin - 0.8</p></li>
+<li><p>find mean, median of haemoglobin_adj &amp; haemoglobin</p></li>
+</ul>
 <div class="cell">
 
 </div>

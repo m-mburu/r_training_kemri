@@ -218,12 +218,6 @@ cat('x =', x)
 
 ### Assignments
 
-#### produce a vector of numbers 1 upto 20
-- produce a vector of numbers 1 upto 20
-- write a function to test if a number is even
-- subset all even numbers
-
-#### Fit a univariate linear model from iris data set
 
 ```{r}
 
